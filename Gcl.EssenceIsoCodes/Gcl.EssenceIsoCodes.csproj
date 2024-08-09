@@ -4,9 +4,31 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <PackageId>Gcl.EssenceIsoCodes</PackageId>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>A simple and straightforward library for accessing essential ISO standard codes, including country, currency, language, and units of measure, in our .NET apps.</Description>
+		<Authors>Goh Chun Lin</Authors>
+		<Copyright>Copyright 2024, Goh Chun Lin</Copyright>
+		<PackageTags>ISO, country codes, currency codes</PackageTags>
+		<Company>Goh Chun Lin</Company>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/gcl-team/gcl-essenceisocodes</RepositoryUrl>
+		<PackageReleaseNotes>Please refer to README.</PackageReleaseNotes>
+		
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		
+		<PackageIcon>logo.png</PackageIcon>
+	
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="MinVer" Version="5.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
