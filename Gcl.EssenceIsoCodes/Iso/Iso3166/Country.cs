@@ -3,10 +3,10 @@ using Gcl.EssenceIsoCodes.Utils;
 namespace Gcl.EssenceIsoCodes.Iso.Iso3166;
 
 /// <summary>
-/// Class <c>Country</c> follows ISO 3166-1 standard – Codes for the representation of names of countries and 
+/// Class Country follows ISO 3166-1 standard – Codes for the representation of names of countries and 
 /// their subdivisions.<br />
 /// Reference:
-/// <see href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"/>
+/// <see href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" />
 /// </summary>
 public class Country
 {
