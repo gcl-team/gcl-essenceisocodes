@@ -8,6 +8,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <PackageId>Gcl.EssenceIsoCodes</PackageId>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
 		<Description>A simple and straightforward library for accessing essential ISO standard codes, including country, currency, language, and units of measure, in our .NET apps.</Description>
 		<Authors>Goh Chun Lin</Authors>
 		<Copyright>Copyright 2024, Goh Chun Lin</Copyright>
