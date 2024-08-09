@@ -35,4 +35,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+		<None Include="logo.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
 </Project>
