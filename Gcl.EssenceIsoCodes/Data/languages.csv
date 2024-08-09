@@ -1,0 +1,144 @@
+ISO 639-1,ISO 639-2,ISO 639-3,Micro Language Name,IETF BCP 47 Language Tag
+af,afr,,Afrikaans,af
+ak,aka,aka,Akan,
+am,amh,,Amharic,am
+,arn,,Mapudungun,arn
+,,,Moroccan Arabic,ary
+ar,ara,ara,Arabic,ar
+as,asm,,Assamese,as
+ay,aym,aym,Aymara,
+az,aze,aze,Azerbaijani,az
+ba,bak,,Bashkir,ba
+be,bel,,Belarusian,be
+bg,bul,,Bulgarian,bg
+bn,ben,,Bengali,bn
+bo,bod,,Tibetan,bo
+br,bre,,Breton,br
+bs,bos,,Bosnian,bs
+ca,cat,,Catalan,ca
+co,cos,,Corsican,co
+cr,cre,cre,Cree,
+cs,ces,,Czech,cs
+cy,cym,,Welsh,cy
+da,dan,,Danish,da
+de,deu,,German,de
+,dsb,,Lower Sorbian,dsb
+dv,div,,Divehi,dv
+el,ell,,Greek,el
+en,eng,,English,en
+es,spa,,Spanish,es
+et,est,est,Estonian,et
+eu,eus,,Basque,eu
+fa,fas,fas,Persian,fa
+ff,ful,ful,Fulah,
+fi,fin,,Finnish,fi
+,fil,,Filipino,fil
+fo,fao,,Faroese,fo
+fr,fra,,French,fr
+fy,fry,,Frisian,fy
+ga,gle,,Irish,ga
+gd,gla,,Scottish Gaelic,gd
+gl,glg,,Galician,gl
+gn,grn,grn,Guarani,
+,gsw,,Swiss German,gsw
+gu,guj,,Gujarati,gu
+ha,hau,,Hausa,ha
+he,heb,,Hebrew,he
+hi,hin,,Hindi,hi
+hr,hrv,,Croatian,hr
+,hsb,,Upper Sorbian,hsb
+hu,hun,,Hungarian,hu
+hy,hye,,Armenian,hy
+id,ind,,Indonesian,id
+ig,ibo,,Igbo,ig
+ii,iii,,Yi,ii
+ik,ipk,ipk,Inupiaq,
+is,isl,,Icelandic,is
+it,ita,,Italian,it
+iu,iku,iku,Inuktitut,iu
+ja,jpn,,Japanese,ja
+ka,kat,,Georgian,ka
+kg,kon,kon,Kongo,
+kk,kaz,,Kazakh,kk
+kl,kal,,Greenlandic,kl
+km,khm,,Khmer,km
+kn,kan,,Kannada,kn
+ko,kor,,Korean,ko
+,kok,,Konkani,kok
+kr,kau,kau,Kanuri,
+ku,kur,kur,Kurdish,ku
+kv,kom,kom,Komi,
+ky,kir,,Kyrgyz,ky
+lb,ltz,,Luxembourgish,lb
+lo,lao,,Lao,lo
+lt,lit,,Lithuanian,lt
+lv,lav,lav,Latvian,lv
+mg,mlg,mlg,Malagasy,
+mi,mri,,Maori,mi
+mk,mkd,,Macedonian,mk
+ml,mal,,Malayalam,ml
+mn,mon,mon,Mongolian,mn
+,moh,,Mohawk,moh
+mr,mar,,Marathi,mr
+ms,msa,msa,Malay,ms
+mt,mlt,,Maltese,mt
+my,mya,,Burmese,my
+,,,Norwegian (Bokmål),nb
+ne,nep,nep,Nepali,ne
+nl,nld,,Dutch,nl
+,,,Norwegian (Nynorsk),nn
+no,nor,nor,Norwegian,no
+oc,oci,,Occitan,oc
+oj,oji,oji,Ojibwa,
+om,orm,orm,Oromo,
+or,ori,ori,Oriya,or
+pa,pan,,Punjabi,pa
+,pap,,Papiamento,pap
+pl,pol,,Polish,pl
+,,,Dari,prs
+ps,pus,pus,Pashto,ps
+pt,por,,Portuguese,pt
+qu,que,que,Quechua,qu
+,,,K'iche,quc
+rm,roh,,Romansh,rm
+ro,ron,,Romanian,ro
+ru,rus,,Russian,ru
+rw,kin,,Kinyarwanda,rw
+sa,san,san,Sanskrit,sa
+,sah,,Yakut,sah
+sc,srd,srd,Sardinian,
+se,sme,,Sami (Northern),se
+si,sin,,Sinhala,si
+sk,slk,,Slovak,sk
+sl,slv,,Slovenian,sl
+,sma,,Sami (Southern),sma
+,smj,,Sami (Lule),smj
+,smn,,Sami (Inari),smn
+,sms,,Sami (Skolt),sms
+sq,sqi,sqi,Albanian,sq
+sr,srp,,Serbian,sr
+,,,Sesotho,st
+sv,swe,,Swedish,sv
+sw,swa,swa,Swahili,sw
+,syc,,Syriac,syc
+ta,tam,,Tamil,ta
+te,tel,,Telugu,te
+tg,tgk,,Tajik,tg
+th,tha,,Thai,th
+tk,tuk,,Turkmen,tk
+tn,tsn,,Tswana,tn
+tr,tur,,Turkish,tr
+tt,tat,,Tatar,tt
+,,,Tamazight,tzm
+ug,uig,,Uyghur,ug
+uk,ukr,,Ukrainian,uk
+ur,urd,,Urdu,ur
+uz,uzb,uzb,Uzbek,uz
+vi,vie,,Vietnamese,vi
+wo,wol,,Wolof,wo
+xh,xho,,Xhosa,xh
+yi,yid,yid,Yiddish,
+yo,yor,,Yoruba,yo
+za,zha,zha,Zhuang,
+zh,zho,zho,Chinese,zh
+zu,zul,,Zulu,zu
