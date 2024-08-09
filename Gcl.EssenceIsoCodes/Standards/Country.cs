@@ -1,6 +1,6 @@
 using Gcl.EssenceIsoCodes.Utils;
 
-namespace Gcl.EssenceIsoCodes.Iso.Iso3166;
+namespace Gcl.EssenceIsoCodes.Standards;
 
 /// <summary>
 /// Class Country follows ISO 3166-1 standard – Codes for the representation of names of countries and 

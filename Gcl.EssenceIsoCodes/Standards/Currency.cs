@@ -1,6 +1,6 @@
 using Gcl.EssenceIsoCodes.Utils;
 
-namespace Gcl.EssenceIsoCodes.Iso.Iso4217;
+namespace Gcl.EssenceIsoCodes.Standards;
 
 /// <summary>
 /// Class Currency follows ISO 4217 standard – Alphabetic codes and numeric codes for the representation of
