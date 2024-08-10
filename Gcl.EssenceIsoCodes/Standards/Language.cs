@@ -42,7 +42,7 @@ public class Language
     public required string CodeIetf { get; init; }
 
     /// <summary>
-    /// This method is used to get all currencies.
+    /// This method is used to get all languages.
     /// </summary>
     /// <returns>
     /// An array of <c>Language</c> with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
