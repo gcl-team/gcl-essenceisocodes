@@ -32,10 +32,10 @@ public class Airport
     public required string CountryCode { get; init; }
 
     /// <summary>
-    /// This method is used to get all currencies.
+    /// This method is used to get all airports.
     /// </summary>
     /// <returns>
-    /// An array of <c>Language</c> with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
+    /// An array of <c>Airport</c> with the airport name, IATA code, ICAO code, and country code.
     /// </returns>
     public static readonly Airport[] Airports = GetAirports();
 
