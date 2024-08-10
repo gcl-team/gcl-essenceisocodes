@@ -1,0 +1,58 @@
+using Gcl.EssenceIsoCodes.Utils;
+
+namespace Gcl.EssenceIsoCodes.Standards;
+
+/// <summary>
+/// Class Airport follows IATA airport code and ICAO code.<br />
+/// Reference 1:
+/// <see href="https://en.wikipedia.org/wiki/IATA_airport_code" /><br />
+/// Reference 2:
+/// <see href="https://en.wikipedia.org/wiki/ICAO_airport_code" /><br />
+/// </summary>
+public class Airport
+{
+    /// <summary>
+    /// Name of airport.
+    /// </summary>
+    public required string Name { get; init; }
+
+    /// <summary>
+    /// IATA airport code, a three-letter geocode.
+    /// </summary>
+    public required string CodeIata { get; init; }
+
+    /// <summary>
+    /// ICAO airport code, a four-letter code designating aerodromes.
+    /// </summary>
+    public required string CodeIcao { get; init; }
+    
+    /// <summary>
+    /// ISO 3166-1 two-letter country code of the airport.
+    /// </summary>
+    public required string CountryCode { get; init; }
+
+    /// <summary>
+    /// This method is used to get all currencies.
+    /// </summary>
+    /// <returns>
+    /// An array of <c>Language</c> with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
+    /// </returns>
+    public static readonly Airport[] Airports = GetAirports();
+
+    private static Airport[] GetAirports()
+    {
+        var languagesDataFilePath = FileManagement.GetDataFilePath("airports.csv");
+
+        var lines = File.ReadAllLines(languagesDataFilePath);
+
+        return lines.Skip(1).Select(line =>
+            line.Split(',').ToArray()).Select(
+            fields => new Airport
+            {
+                Name = fields[2], 
+                CodeIata = fields[0], 
+                CodeIcao = fields[1],
+                CountryCode = fields[3]
+            }).ToArray();
+    }
+}

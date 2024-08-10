@@ -22,17 +22,17 @@ public class Language
     public required string Name { get; init; }
 
     /// <summary>
-    /// ISO 639-1:2002, codes for the representation of names of languages.
+    /// ISO 639-1:2002, code for the representation of names of languages.
     /// </summary>
     public required string CodeIso1 { get; init; }
 
     /// <summary>
-    /// ISO 639-2:1998, codes for the representation of names of languages.
+    /// ISO 639-2:1998, code for the representation of names of languages.
     /// </summary>
     public required string CodeIso2 { get; init; }
 
     /// <summary>
-    /// ISO 639-3:2007, codes for the representation of names of languages.
+    /// ISO 639-3:2007, code for the representation of names of languages.
     /// </summary>
     public required string CodeIso3 { get; init; }
     
