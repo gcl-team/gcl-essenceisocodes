@@ -41,9 +41,9 @@ public class Airport
 
     private static Airport[] GetAirports()
     {
-        var languagesDataFilePath = FileManagement.GetDataFilePath("airports.csv");
+        var airportsDataFilePath = FileManagement.GetDataFilePath("airports.csv");
 
-        var lines = File.ReadAllLines(languagesDataFilePath);
+        var lines = File.ReadAllLines(airportsDataFilePath);
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(

@@ -11,7 +11,7 @@ namespace Gcl.EssenceIsoCodes.Standards;
 public class Timezone
 {
     /// <summary>
-    /// Identifier of timezone .
+    /// Identifier of timezone.
     /// </summary>
     public required string Id { get; init; }
 
@@ -35,9 +35,9 @@ public class Timezone
 
     private static Timezone[] GetTimezones()
     {
-        var languagesDataFilePath = FileManagement.GetDataFilePath("timezones.csv");
+        var timezonesDataFilePath = FileManagement.GetDataFilePath("timezones.csv");
 
-        var lines = File.ReadAllLines(languagesDataFilePath);
+        var lines = File.ReadAllLines(timezonesDataFilePath);
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(
