@@ -31,13 +31,11 @@ public class Timezone
     /// <returns>
     /// An array of <c>Timezone</c> with the tz identifier and UTC offsets.
     /// </returns>
-    public static readonly Timezone[] Timezones = GetTimezones();
+    public static readonly Timezone[] Timezones = await GetTimezonesAsync();
 
-    private static Timezone[] GetTimezones()
+    private static async Task<Timezone[]> GetTimezonesAsync()
     {
-        var timezonesDataFilePath = FileManagement.GetDataFilePath("timezones.csv");
-
-        var lines = File.ReadAllLines(timezonesDataFilePath);
+        var lines = await FileManagement.ReadDataFileContentAsync("timezones.csv");
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(

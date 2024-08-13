@@ -32,13 +32,11 @@ public class Currency
     /// <returns>
     /// An array of <c>Currency</c> with the currency name, three-letter code, and numeric code.
     /// </returns>
-    public static readonly Currency[] Currencies = GetCurrencies();
+    public static readonly Currency[] Currencies = await GetCurrenciesAsync();
 
-    private static Currency[] GetCurrencies()
+    private static async Task<Currency[]> GetCurrenciesAsync()
     {
-        var currenciesDataFilePath = FileManagement.GetDataFilePath("currencies.csv");
-
-        var lines = File.ReadAllLines(currenciesDataFilePath);
+        var lines = await FileManagement.ReadDataFileContentAsync("currencies.csv");
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(
