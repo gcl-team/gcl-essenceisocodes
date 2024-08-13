@@ -10,7 +10,7 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <Description>A simple and straightforward library for accessing essential ISO and other types of standard codes, including country, currency, language, and phone code, in our .NET apps.</Description>
         <Authors>Goh Chun Lin</Authors>
-        <Copyright>Copyright 2024, Goh Chun Lin</Copyright>
+        <Copyright>Copyright 2024, GCL</Copyright>
         <PackageTags>ISO, country codes, currency codes</PackageTags>
         <Company>GCL</Company>
         <RepositoryType>git</RepositoryType>
