@@ -41,13 +41,11 @@ public class Country
     /// An array of <c>Country</c> with the country name, two-letter code, three-letter code, and 
     /// numeric code.
     /// </returns>
-    public static readonly Country[] Countries = GetCountries();
+    public static readonly Country[] Countries = await GetCountriesAsync();
 
-    private static Country[] GetCountries()
+    private static async Task<Country[]> GetCountriesAsync()
     {
-        string countriesDataFilePath = FileManagement.GetDataFilePath("countries.csv");
-
-        var lines = File.ReadAllLines(countriesDataFilePath);
+        var lines = await FileManagement.ReadDataFileContentAsync("countries.csv");
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(

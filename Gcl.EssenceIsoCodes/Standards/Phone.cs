@@ -26,13 +26,11 @@ public class Phone
     /// <returns>
     /// An array of <c>Phone</c> with the country code and phone code of countries.
     /// </returns>
-    public static readonly Phone[] Phones = GetPhones();
+    public static readonly Phone[] Phones = await GetPhonesAsync();
 
-    private static Phone[] GetPhones()
+    private static async Task<Phone[]> GetPhonesAsync()
     {
-        var phoneCodesDataFilePath = FileManagement.GetDataFilePath("phonecodes.csv");
-
-        var lines = File.ReadAllLines(phoneCodesDataFilePath);
+        var lines = await FileManagement.ReadDataFileContentAsync("phonecodes.csv");
 
         return lines.Skip(1).Select(line =>
             line.Split(',').ToArray()).Select(

@@ -1,12 +1,25 @@
+using System.Reflection;
+
 namespace Gcl.EssenceIsoCodes.Utils;
 
-public class FileManagement
+internal static class FileManagement
 {
-    public static string GetDataFilePath(string fileName)
+    internal static async Task<string[]> ReadDataFileContentAsync(string fileName)
     {
-        string basePath = AppDomain.CurrentDomain.BaseDirectory;
-        string filePath = Path.Combine(basePath, "Data", fileName);
+        var assembly = Assembly.GetExecutingAssembly();
+        var projectName = assembly.GetName().Name!;
+        var fileContent = assembly.GetManifestResourceStream($"{projectName}.Data.{fileName}") 
+                          ?? throw new Exception($"{fileName} not found!");
 
-        return filePath;
+        using var fileDataStream = new StreamReader(fileContent);
+
+        var lines = new List<string>();
+
+        while (await fileDataStream.ReadLineAsync() is { } line)
+        {
+            lines.Add(line);
+        }
+
+        return lines.ToArray();
     }
 }
