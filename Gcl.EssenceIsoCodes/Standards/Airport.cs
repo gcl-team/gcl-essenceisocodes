@@ -37,9 +37,7 @@ public class Airport
     /// <returns>
     /// An array of <c>Airport</c> with the airport name, IATA code, ICAO code, and country code.
     /// </returns>
-    public static readonly Airport[] Airports = await GetAirportsAsync();
-
-    private static async Task<Airport[]> GetAirportsAsync()
+    public static async Task<Airport[]> GetAirportsAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("airports.csv");
 

@@ -41,9 +41,7 @@ public class Country
     /// An array of <c>Country</c> with the country name, two-letter code, three-letter code, and 
     /// numeric code.
     /// </returns>
-    public static readonly Country[] Countries = await GetCountriesAsync();
-
-    private static async Task<Country[]> GetCountriesAsync()
+    public static async Task<Country[]> GetCountriesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("countries.csv");
 

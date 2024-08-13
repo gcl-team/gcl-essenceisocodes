@@ -31,9 +31,7 @@ public class Timezone
     /// <returns>
     /// An array of <c>Timezone</c> with the tz identifier and UTC offsets.
     /// </returns>
-    public static readonly Timezone[] Timezones = await GetTimezonesAsync();
-
-    private static async Task<Timezone[]> GetTimezonesAsync()
+    public static async Task<Timezone[]> GetTimezonesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("timezones.csv");
 

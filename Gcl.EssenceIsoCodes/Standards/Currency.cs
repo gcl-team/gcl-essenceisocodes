@@ -32,9 +32,7 @@ public class Currency
     /// <returns>
     /// An array of <c>Currency</c> with the currency name, three-letter code, and numeric code.
     /// </returns>
-    public static readonly Currency[] Currencies = await GetCurrenciesAsync();
-
-    private static async Task<Currency[]> GetCurrenciesAsync()
+    public static async Task<Currency[]> GetCurrenciesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("currencies.csv");
 
