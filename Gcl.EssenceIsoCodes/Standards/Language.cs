@@ -47,9 +47,7 @@ public class Language
     /// <returns>
     /// An array of <c>Language</c> with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
     /// </returns>
-    public static readonly Language[] Languages = await GetLanguagesAsync();
-
-    private static async Task<Language[]> GetLanguagesAsync()
+    public static async Task<Language[]> GetLanguagesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("languages.csv");
 

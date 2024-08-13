@@ -26,9 +26,7 @@ public class Phone
     /// <returns>
     /// An array of <c>Phone</c> with the country code and phone code of countries.
     /// </returns>
-    public static readonly Phone[] Phones = await GetPhonesAsync();
-
-    private static async Task<Phone[]> GetPhonesAsync()
+    public static async Task<Phone[]> GetPhonesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("phonecodes.csv");
 
