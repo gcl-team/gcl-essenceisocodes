@@ -40,9 +40,9 @@ public class Currency
             line.Split(',').ToArray()).Select(
             fields => new Currency
             {
-                Name = fields[1], 
-                Code = fields[0], 
-                NumericCode = fields[2]
+                Name = fields[1].Trim(), 
+                Code = fields[0].Trim(), 
+                NumericCode = fields[2].Trim()
             }).ToArray();
     }
 }

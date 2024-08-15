@@ -55,11 +55,11 @@ public class Language
             line.Split(',').ToArray()).Select(
             fields => new Language
             {
-                Name = fields[3], 
-                CodeIso1 = fields[0], 
-                CodeIso2 = fields[1], 
-                CodeIso3 = fields[2], 
-                CodeIetf = fields[3]
+                Name = fields[3].Trim(), 
+                CodeIso1 = fields[0].Trim(), 
+                CodeIso2 = fields[1].Trim(), 
+                CodeIso3 = fields[2].Trim(), 
+                CodeIetf = fields[3].Trim()
             }).ToArray();
     }
 }

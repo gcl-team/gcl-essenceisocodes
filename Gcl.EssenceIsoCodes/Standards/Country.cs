@@ -49,10 +49,10 @@ public class Country
             line.Split(',').ToArray()).Select(
                 fields => new Country
                 {
-                    Name = fields[0], 
-                    TwoLetterCode = fields[1], 
-                    ThreeLetterCode = fields[2], 
-                    NumericCode = fields[3]
+                    Name = fields[0].Trim(), 
+                    TwoLetterCode = fields[1].Trim(), 
+                    ThreeLetterCode = fields[2].Trim(), 
+                    NumericCode = fields[3].Trim()
                 }).ToArray();
     }
 }

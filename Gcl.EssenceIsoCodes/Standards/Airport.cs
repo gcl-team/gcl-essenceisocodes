@@ -45,10 +45,10 @@ public class Airport
             line.Split(',').ToArray()).Select(
             fields => new Airport
             {
-                Name = fields[2], 
-                CodeIata = fields[0], 
-                CodeIcao = fields[1],
-                CountryCode = fields[3]
+                Name = fields[2].Trim(), 
+                CodeIata = fields[0].Trim(), 
+                CodeIcao = fields[1].Trim(),
+                CountryCode = fields[3].Trim()
             }).ToArray();
     }
 }

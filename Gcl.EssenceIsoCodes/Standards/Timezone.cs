@@ -39,9 +39,9 @@ public class Timezone
             line.Split(',').ToArray()).Select(
             fields => new Timezone
             {
-                Id = fields[0], 
-                StandardTimeOffset = ParseTimeSpanText(fields[1]),
-                DaylightSavingTimeOffset = ParseTimeSpanText(fields[2])
+                Id = fields[0].Trim(), 
+                StandardTimeOffset = ParseTimeSpanText(fields[1].Trim()),
+                DaylightSavingTimeOffset = ParseTimeSpanText(fields[2].Trim())
             }).ToArray();
     }
 
