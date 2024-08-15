@@ -34,8 +34,8 @@ public class Phone
             line.Split(',').ToArray()).Select(
             fields => new Phone
             {
-                CountryCode = fields[0], 
-                PhoneCode = fields[1]
+                CountryCode = fields[0].Trim(), 
+                PhoneCode = fields[1].Trim()
             }).ToArray();
     }
 }
