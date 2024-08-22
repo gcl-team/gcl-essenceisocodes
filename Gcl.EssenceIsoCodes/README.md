@@ -4,7 +4,7 @@ EssenceIsoCodes is a C# .NET 8 library that provides developers easy access to e
 including country, currency, language, and phone codes, in .NET applications. This library is designed to be 
 lightweight and efficient, making it easy to integrate into your projects.
 
-### 2. Features and How to Use
+## 2. Features and How to Use
 
 #### Airport Codes 
 - Retrieve airport name, IATA code, ICAO code, and country code.
