@@ -29,9 +29,9 @@ public class Timezone
     /// This method is used to get all timezones.
     /// </summary>
     /// <returns>
-    /// An array of <c>Timezone</c> with the tz identifier and UTC offsets.
+    /// Timezones with the tz identifier and UTC offsets.
     /// </returns>
-    public static async Task<Timezone[]> GetTimezonesAsync()
+    public static async Task<HashSet<Timezone>> GetTimezonesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("timezones.csv");
 
@@ -42,11 +42,26 @@ public class Timezone
                 Id = fields[0].Trim(), 
                 StandardTimeOffset = ParseTimeSpanText(fields[1].Trim()),
                 DaylightSavingTimeOffset = ParseTimeSpanText(fields[2].Trim())
-            }).ToArray();
+            }).ToHashSet();
     }
 
     private static TimeSpan ParseTimeSpanText(string timeSpanText)
     {
         return TimeSpan.Parse(timeSpanText[0] == '+' ? timeSpanText[1..] : timeSpanText);
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Timezone timezone)
+        {
+            return Id == timezone.Id;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return Id.GetHashCode();
     }
 }

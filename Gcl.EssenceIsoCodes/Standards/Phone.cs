@@ -24,9 +24,9 @@ public class Phone
     /// This method is used to get all phone codes.
     /// </summary>
     /// <returns>
-    /// An array of <c>Phone</c> with the country code and phone code of countries.
+    /// Phones with the country code and phone code of countries.
     /// </returns>
-    public static async Task<Phone[]> GetPhonesAsync()
+    public static async Task<HashSet<Phone>> GetPhonesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("phonecodes.csv");
 
@@ -36,6 +36,21 @@ public class Phone
             {
                 CountryCode = fields[0].Trim(), 
                 PhoneCode = fields[1].Trim()
-            }).ToArray();
+            }).ToHashSet();
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Phone phone)
+        {
+            return PhoneCode == phone.PhoneCode;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return PhoneCode.GetHashCode();
     }
 }

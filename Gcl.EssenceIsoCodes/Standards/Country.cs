@@ -38,10 +38,10 @@ public class Country
     /// This method is used to get all countries.
     /// </summary>
     /// <returns>
-    /// An array of <c>Country</c> with the country name, two-letter code, three-letter code, and 
+    /// Countries with the country name, two-letter code, three-letter code, and 
     /// numeric code.
     /// </returns>
-    public static async Task<Country[]> GetCountriesAsync()
+    public static async Task<HashSet<Country>> GetCountriesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("countries.csv");
 
@@ -53,6 +53,24 @@ public class Country
                     TwoLetterCode = fields[1].Trim(), 
                     ThreeLetterCode = fields[2].Trim(), 
                     NumericCode = fields[3].Trim()
-                }).ToArray();
+                }).ToHashSet();
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Country country)
+        {
+            return
+                TwoLetterCode == country.TwoLetterCode &&
+                ThreeLetterCode == country.ThreeLetterCode &&
+                NumericCode == country.NumericCode;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return (TwoLetterCode, ThreeLetterCode, NumericCode).GetHashCode();
     }
 }
