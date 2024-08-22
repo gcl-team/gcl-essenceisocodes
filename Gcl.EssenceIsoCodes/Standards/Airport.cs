@@ -35,9 +35,9 @@ public class Airport
     /// This method is used to get all airports.
     /// </summary>
     /// <returns>
-    /// An array of <c>Airport</c> with the airport name, IATA code, ICAO code, and country code.
+    /// Airports with the airport name, IATA code, ICAO code, and country code.
     /// </returns>
-    public static async Task<Airport[]> GetAirportsAsync()
+    public static async Task<HashSet<Airport>> GetAirportsAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("airports.csv");
 
@@ -49,6 +49,23 @@ public class Airport
                 CodeIata = fields[0].Trim(), 
                 CodeIcao = fields[1].Trim(),
                 CountryCode = fields[3].Trim()
-            }).ToArray();
+            }).ToHashSet();
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Airport airport)
+        {
+            return 
+                CodeIata == airport.CodeIata && 
+                CodeIcao == airport.CodeIcao;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return (CodeIata, CodeIcao).GetHashCode();
     }
 }

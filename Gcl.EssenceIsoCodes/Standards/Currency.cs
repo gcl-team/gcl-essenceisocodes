@@ -30,9 +30,9 @@ public class Currency
     /// This method is used to get all currencies.
     /// </summary>
     /// <returns>
-    /// An array of <c>Currency</c> with the currency name, three-letter code, and numeric code.
+    /// Currencies with the currency name, three-letter code, and numeric code.
     /// </returns>
-    public static async Task<Currency[]> GetCurrenciesAsync()
+    public static async Task<HashSet<Currency>> GetCurrenciesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("currencies.csv");
 
@@ -43,6 +43,23 @@ public class Currency
                 Name = fields[1].Trim(), 
                 Code = fields[0].Trim(), 
                 NumericCode = fields[2].Trim()
-            }).ToArray();
+            }).ToHashSet();
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Currency currency)
+        {
+            return
+                Code == currency.Code &&
+                NumericCode == currency.NumericCode;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return (Code, NumericCode).GetHashCode();
     }
 }

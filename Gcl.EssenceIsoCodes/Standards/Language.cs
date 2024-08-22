@@ -45,9 +45,9 @@ public class Language
     /// This method is used to get all languages.
     /// </summary>
     /// <returns>
-    /// An array of <c>Language</c> with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
+    /// Languages with the language name, ISO 639-1, ISO 639-2, and ISO 639-3 codes.
     /// </returns>
-    public static async Task<Language[]> GetLanguagesAsync()
+    public static async Task<HashSet<Language>> GetLanguagesAsync()
     {
         var lines = await FileManagement.ReadDataFileContentAsync("languages.csv");
 
@@ -60,6 +60,25 @@ public class Language
                 CodeIso2 = fields[1].Trim(), 
                 CodeIso3 = fields[2].Trim(), 
                 CodeIetf = fields[3].Trim()
-            }).ToArray();
+            }).ToHashSet();
+    }
+    
+    public override bool Equals(object? obj)
+    {
+        if (obj is Language language)
+        {
+            return
+                CodeIso1 == language.CodeIso1 &&
+                CodeIso2 == language.CodeIso2 &&
+                CodeIso3 == language.CodeIso3 &&
+                CodeIetf == language.CodeIetf;
+        }
+        
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return (CodeIso1, CodeIso2, CodeIso3, CodeIetf).GetHashCode();
     }
 }
